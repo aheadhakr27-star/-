@@ -1,2 +1,110 @@
-*.agdai
-**/MAlonzo/**
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>رسالة لأختي ❤️</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ffd1dc,#ffc0cb);
+    overflow:hidden;
+    font-family:Tahoma,sans-serif;
+}
+
+.container{
+    text-align:center;
+}
+
+.envelope{
+    width:300px;
+    height:200px;
+    background:#ff6fa5;
+    position:relative;
+    margin:auto;
+    cursor:pointer;
+    border-radius:10px;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+.flap{
+    position:absolute;
+    top:0;
+    left:0;
+    width:0;
+    height:0;
+    border-left:150px solid transparent;
+    border-right:150px solid transparent;
+    border-top:100px solid #ff4f8b;
+    transform-origin:top;
+    transition:1s;
+}
+
+.letter{
+    position:absolute;
+    width:260px;
+    height:160px;
+    background:white;
+    left:20px;
+    top:20px;
+    border-radius:10px;
+    padding:15px;
+    box-sizing:border-box;
+    transform:translateY(80px);
+    transition:1s;
+    opacity:0;
+}
+
+.open .flap{
+    transform:rotateX(180deg);
+}
+
+.open .letter{
+    transform:translateY(-120px);
+    opacity:1;
+}
+
+h2{
+    color:#ff4081;
+}
+
+p{
+    font-size:18px;
+    line-height:1.8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="envelope" onclick="openLetter()">
+        <div class="flap"></div>
+
+        <div class="letter">
+            <h2>إلى أختي الغالية ❤️</h2>
+
+            <p>
+                حقك عليا لو زعلتك 🌹<br>
+                إنتِ أغلى أخت في الدنيا كلها.<br>
+                ربنا يخليكي ليا دايمًا 💖
+            </p>
+        </div>
+    </div>
+
+    <h3>اضغطي على الظرف 💌</h3>
+</div>
+
+<script>
+function openLetter(){
+    document.querySelector('.envelope').classList.toggle('open');
+}
+</script>
+
+</body>
+</html>
